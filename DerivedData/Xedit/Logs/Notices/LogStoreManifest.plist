@@ -5,6 +5,91 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>772EC057-797D-4D63-A132-74608C412B8D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>772EC057-797D-4D63-A132-74608C412B8D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfcHJvdmlkZXJGaWxlUGF0aFN0cmluZyI6IlwvVXNlcnNcL211c3RhZmFtYWxpa1wvRG9jdW1lbnRzXC9YZWRpdFwvWGVkaXQueGNvZGVwcm9qIiwiYmx1ZXByaW50X2JsdWVwcmludElkZW50aWZpZXIiOiI2MTQzREU0NzJBNkFBOEE1MDAzOERCQ0UifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>711722730.80747604</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build Xedit</string>
+			<key>uniqueIdentifier</key>
+			<string>772EC057-797D-4D63-A132-74608C412B8D</string>
+		</dict>
+		<key>7FFE8E05-FE3C-4714-B21C-0F3D7734ACF5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7FFE8E05-FE3C-4714-B21C-0F3D7734ACF5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>711722730.80747604</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build Xedit</string>
+			<key>uniqueIdentifier</key>
+			<string>7FFE8E05-FE3C-4714-B21C-0F3D7734ACF5</string>
+		</dict>
+		<key>B89B8703-61AD-4E3C-96A5-FD10442FA920</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B89B8703-61AD-4E3C-96A5-FD10442FA920.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9tdXN0YWZhbWFsaWtcL0RvY3VtZW50c1wvWGVkaXRcL1hlZGl0Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>711722730.80747604</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build Xedit</string>
+			<key>uniqueIdentifier</key>
+			<string>B89B8703-61AD-4E3C-96A5-FD10442FA920</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

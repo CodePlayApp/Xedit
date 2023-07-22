@@ -5,6 +5,52 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>E6B6731C-23B1-48EA-985E-4FC2BFDF501D</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>E9AF3824-EAE0-40A9-837E-A7760B744206</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-Xedit-2023.07.22_16-45-30-+0400.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Xedit project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Xedit</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Xedit</string>
+			<key>timeStartedRecording</key>
+			<real>711722730.79638696</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run Xedit</string>
+			<key>uniqueIdentifier</key>
+			<string>E6B6731C-23B1-48EA-985E-4FC2BFDF501D</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

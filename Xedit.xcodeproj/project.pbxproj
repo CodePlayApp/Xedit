@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6135ABAD2A6C1465008B8526 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6135ABAC2A6C1465008B8526 /* README.md */; };
+		6135ABAF2A6C25B2008B8526 /* CODE_OF_CONDUCT.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6135ABAE2A6C25B2008B8526 /* CODE_OF_CONDUCT.txt */; };
 		6143DE4D2A6AA8A50038DBCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6143DE4C2A6AA8A50038DBCE /* AppDelegate.m */; };
 		6143DE502A6AA8A50038DBCE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6143DE4F2A6AA8A50038DBCE /* ViewController.m */; };
 		6143DE522A6AA8A60038DBCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6143DE512A6AA8A60038DBCE /* Assets.xcassets */; };
-		6143DE552A6AA8A60038DBCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6143DE532A6AA8A60038DBCE /* Main.storyboard */; };
-		6143DE572A6AA8A60038DBCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6143DE562A6AA8A60038DBCE /* main.m */; };
+		6143DE572A6AA8A60038DBCE /* XeditApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6143DE562A6AA8A60038DBCE /* XeditApp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6135ABAC2A6C1465008B8526 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6135ABAE2A6C25B2008B8526 /* CODE_OF_CONDUCT.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CODE_OF_CONDUCT.txt; sourceTree = "<group>"; };
 		6143DE482A6AA8A50038DBCE /* Xedit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xedit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6143DE4B2A6AA8A50038DBCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6143DE4C2A6AA8A50038DBCE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6143DE4E2A6AA8A50038DBCE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6143DE4F2A6AA8A50038DBCE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6143DE512A6AA8A60038DBCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6143DE542A6AA8A60038DBCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6143DE562A6AA8A60038DBCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6143DE562A6AA8A60038DBCE /* XeditApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XeditApp.m; sourceTree = "<group>"; };
 		6143DE582A6AA8A60038DBCE /* Xedit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Xedit.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,6 +42,8 @@
 		6143DE3F2A6AA8A50038DBCE = {
 			isa = PBXGroup;
 			children = (
+				6135ABAE2A6C25B2008B8526 /* CODE_OF_CONDUCT.txt */,
+				6135ABAC2A6C1465008B8526 /* README.md */,
 				6143DE4A2A6AA8A50038DBCE /* Xedit */,
 				6143DE492A6AA8A50038DBCE /* Products */,
 			);
@@ -61,8 +65,7 @@
 				6143DE4E2A6AA8A50038DBCE /* ViewController.h */,
 				6143DE4F2A6AA8A50038DBCE /* ViewController.m */,
 				6143DE512A6AA8A60038DBCE /* Assets.xcassets */,
-				6143DE532A6AA8A60038DBCE /* Main.storyboard */,
-				6143DE562A6AA8A60038DBCE /* main.m */,
+				6143DE562A6AA8A60038DBCE /* XeditApp.m */,
 				6143DE582A6AA8A60038DBCE /* Xedit.entitlements */,
 			);
 			path = Xedit;
@@ -125,8 +128,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6135ABAD2A6C1465008B8526 /* README.md in Resources */,
 				6143DE522A6AA8A60038DBCE /* Assets.xcassets in Resources */,
-				6143DE552A6AA8A60038DBCE /* Main.storyboard in Resources */,
+				6135ABAF2A6C25B2008B8526 /* CODE_OF_CONDUCT.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +142,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6143DE502A6AA8A50038DBCE /* ViewController.m in Sources */,
-				6143DE572A6AA8A60038DBCE /* main.m in Sources */,
+				6143DE572A6AA8A60038DBCE /* XeditApp.m in Sources */,
 				6143DE4D2A6AA8A50038DBCE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		6143DE532A6AA8A60038DBCE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6143DE542A6AA8A60038DBCE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6143DE592A6AA8A60038DBCE /* Debug */ = {

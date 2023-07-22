@@ -1,0 +1,100 @@
+Xedit CODE OF CONDUCT START
+
+Xedit - TEMPORARY CODE OF CONDUCT
+(Will require updating in the later future)
+
+    - Authored by: shab
+    - Created: 22/07/2023
+    - Last Edited: 22/07/2023
+
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+
+Objective-C Coding Conventions
+
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+
+- Variables
+
+Use camelCase
+
+e.g int myIntegerVariable = 0;
+
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+
+- Methods
+
+Use camelCase
+
+- (void) someMethod;
+
+- Parameter arguments and types
+Preferred to use same convention as Apple which is no spaces
+This is not REQUIRED but it is RECOMMENDED.
+
+e.g (follow camelCase convention for it too)
+
+- (void) someMethod:(int)myAgeHere;
+
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+
+- Class and Objects
+
+Use PascalCase for Classes/Interfaces
+This also applies to structs too
+
+e.g @interface MyInterface;
+e.g @class MyClass;
+e.g struct MyStruct
+
+However, for custom types or custom struct types, use snake_case instead
+and end it with "_t".
+
+e.g struct my_custom_type_t
+
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+
+Tabs and Spacing
+
+Tabs - Use a maximum of 1 tab on a new line (equiv 4 spaces)
+
+if (x) {
+    1_TAB
+    4_SPACES
+}
+
+Leave a gap of 1 line between different logic statements
+
+MyController* control = [[MyController alloc] init];
+MyView* view = [[MyView alloc] init];
+
+if (control.notLoaded) {
+    [view doSomethingHere];
+}
+
+In this example, the objects are initialised closely and the logic
+statements are 1 line below. This is to make code more readable.
+
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+
+C/C++ Coding Conventions
+
+Variables, methods and classes should use snake_case conventions
+Apart from that, same rules apply from Objective-C conventions
+
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+
+Xedit CODE OF CONDUCT END
