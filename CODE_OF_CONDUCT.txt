@@ -88,6 +88,24 @@ statements are 1 line below. This is to make code more readable.
 ------------------------------------------------------------
 ------------------------------------------------------------
 
+Including and Importing
+
+For Objective-C headers, use #import and for C/C++ headers use #include
+We prefer to NOT use pragma statements for header guards.
+
+Normal Header Guard:
+
+#ifndef MY_HEADER_FILE_OBJC
+#define MY_HEADER_FILE_OBJC
+
+#endif /* MY_HEADER_FILE_OBJC */
+
+This applies to C/C++ conventions too.
+
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+
 C/C++ Coding Conventions
 
 Variables, methods and classes should use snake_case conventions
