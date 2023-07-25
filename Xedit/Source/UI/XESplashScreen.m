@@ -20,7 +20,6 @@
     
     [self.window setBackgroundColor:[NSColor whiteColor]];
     
-    // DO OTHER OPERATIONS BEFORE DISPLAYING WINDOW
     [self createLeftView];
     [self createRightView];
     [self createMainStack];
