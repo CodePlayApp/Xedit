@@ -40,6 +40,8 @@
 #ifdef XE_USE_CONFIG
 #   define XE_SPLASH_SCREEN_WIDTH 795
 #   define XE_SPLASH_SCREEN_HEIGHT 460
+#   define XE_SPLASH_TITLE_NAME "Xedit"
+#   define XE_BUILD_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey: @"CFBundleShortVersionString"]
 #endif
 
 #endif /* XEDIT_XETOOLS_H */

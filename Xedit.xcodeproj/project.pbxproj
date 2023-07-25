@@ -14,6 +14,7 @@
 		6143DE572A6AA8A60038DBCE /* XeditApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6143DE562A6AA8A60038DBCE /* XeditApp.m */; };
 		61831B5F2A6F963B008A2C2B /* XESplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 61831B5E2A6F963B008A2C2B /* XESplashScreen.m */; };
 		61831B642A6FAB86008A2C2B /* XEWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61831B632A6FAB86008A2C2B /* XEWindowManager.m */; };
+		61831B692A700D89008A2C2B /* XEFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61831B682A700D89008A2C2B /* XEFontManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		6143DE582A6AA8A60038DBCE /* Xedit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Xedit.entitlements; sourceTree = "<group>"; };
 		61831B5E2A6F963B008A2C2B /* XESplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XESplashScreen.m; sourceTree = "<group>"; };
 		61831B632A6FAB86008A2C2B /* XEWindowManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEWindowManager.m; sourceTree = "<group>"; };
+		61831B662A7007B7008A2C2B /* XEFontManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEFontManager.h; sourceTree = "<group>"; };
+		61831B682A700D89008A2C2B /* XEFontManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XEFontManager.m; sourceTree = "<group>"; };
 		61A881E42A6D56ED00B801E3 /* XESplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XESplashScreen.h; sourceTree = "<group>"; };
 		61A881E72A6D727200B801E3 /* XEWindowManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEWindowManager.h; sourceTree = "<group>"; };
 		61A881E82A6D72BF00B801E3 /* XETools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XETools.h; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		6135ABB52A6C71DE008B8526 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				61831B652A7007A3008A2C2B /* Text */,
 				61A881EB2A6D8B6800B801E3 /* Templates */,
 				61A881E62A6D725D00B801E3 /* Layout */,
 				61A881E52A6D725400B801E3 /* Window */,
@@ -129,6 +133,7 @@
 		61831B612A6FAB6B008A2C2B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				61831B672A700D7C008A2C2B /* Text */,
 				61831B622A6FAB78008A2C2B /* Window */,
 			);
 			path = Manager;
@@ -140,6 +145,22 @@
 				61831B632A6FAB86008A2C2B /* XEWindowManager.m */,
 			);
 			path = Window;
+			sourceTree = "<group>";
+		};
+		61831B652A7007A3008A2C2B /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				61831B662A7007B7008A2C2B /* XEFontManager.h */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		61831B672A700D7C008A2C2B /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				61831B682A700D89008A2C2B /* XEFontManager.m */,
+			);
+			path = Text;
 			sourceTree = "<group>";
 		};
 		61A881E52A6D725400B801E3 /* Window */ = {
@@ -252,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61831B642A6FAB86008A2C2B /* XEWindowManager.m in Sources */,
+				61831B692A700D89008A2C2B /* XEFontManager.m in Sources */,
 				6143DE572A6AA8A60038DBCE /* XeditApp.m in Sources */,
 				61831B5F2A6F963B008A2C2B /* XESplashScreen.m in Sources */,
 			);

@@ -7,6 +7,7 @@
 
 #import "XESplashScreen.h"
 #import "XEWindowManager.h"
+#import "XEFontManager.h"
 
 @implementation XESplashScreen
 
@@ -18,7 +19,7 @@
     self.window = [XEWindowManager makeWindow:NSMakeRect(0, 0, self.width, self.height) mask:NSWindowStyleMaskTitled | NSWindowStyleMaskClosable defer:NO];
     self.window.titlebarAppearsTransparent = YES;
     
-    [self.window setBackgroundColor:[NSColor whiteColor]];
+    [self.window setBackgroundColor:[NSColor controlBackgroundColor]];
     
     [self createLeftView];
     [self createRightView];
@@ -34,22 +35,32 @@
     self.mainStack.orientation = NSUserInterfaceLayoutOrientationHorizontal;
     self.mainStack.alignment = NSLayoutAttributeCenterY;
     self.mainStack.distribution = NSStackViewDistributionFillEqually;
+    self.mainStack.edgeInsets = NSEdgeInsetsMake(0, 35, 0, 0);
 }
 
 - (void) createLeftView {
-    NSBox* box = [[NSBox alloc] init];
-    box.boxType = NSBoxCustom;
-    box.fillColor = [NSColor redColor];
-    [box setFrameSize: NSMakeSize(100, 100)];
+    NSImage* logo = [NSImage imageNamed:@"AppIcon"];
+    NSImageView* logoView = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, logo.size.width, logo.size.height)];
+    logoView.image = logo;
     
-    self.leftStack = [NSStackView stackViewWithViews: @[box]];
+    NSString* titleInfo = @"Welcome to ";
+    NSTextField* title = [NSTextField labelWithString: [titleInfo stringByAppendingString:@XE_SPLASH_TITLE_NAME]];
+    [title setFont: [XEFontManager resizeFont:title fontSize:45.0f fontWeight:4.0f]];
+    
+    NSString* versionStringMain = @"Version: ";
+    NSTextField* versionString = [NSTextField labelWithString: [versionStringMain stringByAppendingString: XE_BUILD_VERSION]];
+    [versionString setFont: [XEFontManager resizeFont:versionString fontSize:15.0f fontWeight:4.0f]];
+    [versionString setTextColor: [NSColor grayColor]];
+    
+    self.leftStack = [NSStackView stackViewWithViews: @[logoView, title, versionString]];
     self.leftStack.orientation = NSUserInterfaceLayoutOrientationVertical;
     self.leftStack.alignment = NSLayoutAttributeCenterX;
 }
 
 - (void) createRightView {
     self.rightStack = [NSStackView stackViewWithViews: @[]];
-    self.leftStack.orientation = NSUserInterfaceLayoutOrientationVertical;
+    self.rightStack.orientation = NSUserInterfaceLayoutOrientationVertical;
+    self.rightStack.alignment = NSLayoutAttributeCenterX;
 }
 
 - (void) createRecentStack {
