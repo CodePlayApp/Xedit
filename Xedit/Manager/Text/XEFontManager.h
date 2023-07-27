@@ -14,7 +14,7 @@
 
 @interface XEFontManager : NSObject
 
-+ (NSFont*) resizeFont:(NSTextField*)text fontSize:(float)size fontWeight:(float)weight;
++ (NSFont*) resizeFont:(NSFont*)text fontSize:(float)size fontWeight:(float)weight;
 
 @end
 

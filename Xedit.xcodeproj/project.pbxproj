@@ -32,6 +32,7 @@
 		61A881E42A6D56ED00B801E3 /* XESplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XESplashScreen.h; sourceTree = "<group>"; };
 		61A881E72A6D727200B801E3 /* XEWindowManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEWindowManager.h; sourceTree = "<group>"; };
 		61A881E82A6D72BF00B801E3 /* XETools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XETools.h; sourceTree = "<group>"; };
+		61DD812D2A717FFA00D721C1 /* XEConstraintManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEConstraintManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +134,7 @@
 		61831B612A6FAB6B008A2C2B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				61DD812E2A71988B00D721C1 /* Layout */,
 				61831B672A700D7C008A2C2B /* Text */,
 				61831B622A6FAB78008A2C2B /* Window */,
 			);
@@ -174,6 +176,7 @@
 		61A881E62A6D725D00B801E3 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				61DD812D2A717FFA00D721C1 /* XEConstraintManager.h */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -199,6 +202,13 @@
 			children = (
 			);
 			path = Templates;
+			sourceTree = "<group>";
+		};
+		61DD812E2A71988B00D721C1 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

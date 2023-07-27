@@ -9,8 +9,8 @@
 
 @implementation XEFontManager
 
-+ (NSFont*) resizeFont:(NSTextField *)text fontSize:(float)size fontWeight:(float)weight {
-    return [[NSFontManager sharedFontManager] fontWithFamily: text.font.familyName traits:NSFontUIOptimizedTrait weight:weight size:size];
++ (NSFont*) resizeFont:(NSFont *)text fontSize:(float)size fontWeight:(float)weight {
+    return [[NSFontManager sharedFontManager] fontWithFamily: text.fontName traits:NSFontUIOptimizedTrait weight:weight size:size];
 }
 
 @end

@@ -13,7 +13,13 @@
 
 #import "XETools.h"
 
-@interface XESplashScreen : NSObject<NSApplicationDelegate>
+@interface XESplashScreen : NSObject<NSApplicationDelegate> {
+@private
+    NSWindow* window;
+    NSStackView* mainStack;
+    NSStackView* leftStack;
+    NSStackView* rightStack;
+}
 /*
  Main Window
  Left Side
@@ -24,13 +30,6 @@
 
 @property(nonatomic, readonly) int width;
 @property(nonatomic, readonly) int height;
-
-// DO NOT ACCESS ANY OF THE PROPERTIES BELOW
-// DO NOT USE PUBLICLY
-@property(atomic, readwrite) NSWindow* window;
-@property(nonatomic, readwrite) NSStackView* mainStack;
-@property(nonatomic, readwrite) NSStackView* leftStack;
-@property(nonatomic, readwrite) NSStackView* rightStack;
 
 // Synced with macOS system colour
 - (void) createWelcomeWindow;
