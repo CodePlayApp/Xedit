@@ -15,10 +15,12 @@ static NSLayoutConstraint* fixLayoutConstraint(id view, NSLayoutAttribute attrib
 @implementation XESplashScreen
 
 - (void) createWelcomeWindow {
-    self->window = [XEWindowManager makeWindow:NSMakeRect(0, 0, self.width, self.height) mask:NSWindowStyleMaskTitled | NSWindowStyleMaskClosable defer:NO];
+    self->window = [XEWindowManager makeWindow:NSMakeRect(0, 0, self.width, self.height) mask: NSWindowStyleMaskClosable | NSWindowStyleMaskTitled | NSWindowStyleMaskFullSizeContentView defer:NO];
+    [self->window setTitleVisibility:NSWindowTitleHidden];
     self->window.titlebarAppearsTransparent = YES;
     
     [self->window setBackgroundColor:[NSColor controlBackgroundColor]];
+    //[self->window setStyleMask:NSWindowStyleMaskBorderless];
     
     [self createLeftView];
     [self createRightView];
@@ -27,6 +29,7 @@ static NSLayoutConstraint* fixLayoutConstraint(id view, NSLayoutAttribute attrib
     [self->window setContentView:self->mainStack];
     [self->window center];
     [self->window makeKeyAndOrderFront:nil];
+    [self->window setLevel:NSNormalWindowLevel];
 }
 
 - (void) createMainStack {
@@ -51,7 +54,7 @@ static NSLayoutConstraint* fixLayoutConstraint(id view, NSLayoutAttribute attrib
     [versionString setFont: [XEFontManager resizeFont:versionString.font fontSize:15.0f fontWeight:4.0f]];
     [versionString setTextColor: [NSColor grayColor]];
     
-    NSImage* plusIcon = [NSImage imageWithSystemSymbolName:@"plus.app" accessibilityDescription:nil];
+    //NSImage* plusIcon = [NSImage imageWithSystemSymbolName:@"plus.app" accessibilityDescription:nil];
     //[plusIcon setSize:NSMakeSize(30, 30)];
     
     NSView* createButton = createSplashButton(@"Create a new project", NSBezelStyleRounded, NO);
@@ -70,9 +73,18 @@ static NSLayoutConstraint* fixLayoutConstraint(id view, NSLayoutAttribute attrib
 }
 
 - (void) createRightView {
-    self->rightStack = [NSStackView stackViewWithViews: @[]];
-    self->rightStack.orientation = NSUserInterfaceLayoutOrientationVertical;
-    self->rightStack.alignment = NSLayoutAttributeCenterX;
+    NSBox* box = [[NSBox alloc] init];
+    box.boxType = NSBoxCustom;
+    box.fillColor = [NSColor clearColor];
+    box.borderWidth = 0;
+    box.translatesAutoresizingMaskIntoConstraints = NO;
+     
+    self->rightStack = [NSStackView stackViewWithViews: @[box]];
+    self->mainStack.alignment = NSLayoutAttributeTop; // Set to Top to align at the top
+    self->mainStack.distribution = NSStackViewDistributionFill; // Set to Fill to fill the available height
+    self->rightStack.wantsLayer = YES;
+    self->rightStack.layer.backgroundColor = [NSColor controlAccentColor].CGColor;
+    self->rightStack.layer.opacity = 0.05f;
 }
 
 - (void) createRecentStack {
@@ -104,7 +116,6 @@ static NSLayoutConstraint* fixLayoutConstraint(id view, NSLayoutAttribute attrib
 }
 
 - (void) applicationWillTerminate:(NSNotification *)notification {
-    
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
@@ -120,25 +131,9 @@ static NSLayoutConstraint* fixLayoutConstraint(id view, NSLayoutAttribute attrib
 static NSView* createSplashButton(NSString* title, NSUInteger style, BOOL bordered) {
     
     NSView* mainButtonView = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, 300, 100)];
-    //[mainButtonView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [mainButtonView setTranslatesAutoresizingMaskIntoConstraints:NO];
     mainButtonView.wantsLayer = NO;
     mainButtonView.layer.backgroundColor = [NSColor redColor].CGColor;
-    
-//    NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:mainButtonView
-//                                                                       attribute:NSLayoutAttributeWidth
-//                                                                       relatedBy:NSLayoutRelationEqual
-//                                                                          toItem:nil
-//                                                                       attribute:NSLayoutAttributeNotAnAttribute
-//                                                                      multiplier:1.0
-//                                                                        constant:300];
-//
-//    NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:mainButtonView
-//                                                                         attribute:NSLayoutAttributeHeight
-//                                                                         relatedBy:NSLayoutRelationEqual
-//                                                                            toItem:nil
-//                                                                         attribute:NSLayoutAttributeNotAnAttribute
-//                                                                        multiplier:1.0
-//                                                                          constant:50];
     
     NSLayoutConstraint* widthConstraint = fixLayoutConstraint(mainButtonView, NSLayoutAttributeWidth, NSLayoutRelationEqual, nil, NSLayoutAttributeNotAnAttribute, 1.0f, 300);
     NSLayoutConstraint* heightConstraint = fixLayoutConstraint(mainButtonView, NSLayoutAttributeHeight, NSLayoutRelationEqual, nil, NSLayoutAttributeNotAnAttribute, 1.0f, 50);
