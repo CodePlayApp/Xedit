@@ -19,6 +19,7 @@
     NSStackView* mainStack;
     NSStackView* leftStack;
     NSStackView* rightStack;
+    NSVisualEffectView* effect;
 }
 /*
  Main Window

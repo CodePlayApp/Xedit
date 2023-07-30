@@ -24,6 +24,8 @@
 + (void) moveToScreen:(NSWindow*)window :(NSScreen*)screen;
 + (void) destroyWindow:(NSWindow*)window;
 
++ (void) hideWindowButtons:(NSWindow*)currentWindow styleButton:(NSUInteger)windowButton;
+
 @end
 
 #endif /* XEDIT_MANAGER_WINDOW_XEWINDOWMANAGER_H */

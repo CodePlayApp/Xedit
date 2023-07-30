@@ -20,7 +20,9 @@ static NSLayoutConstraint* fixLayoutConstraint(id view, NSLayoutAttribute attrib
     self->window.titlebarAppearsTransparent = YES;
     
     [self->window setBackgroundColor:[NSColor controlBackgroundColor]];
-    //[self->window setStyleMask:NSWindowStyleMaskBorderless];
+    
+    [XEWindowManager hideWindowButtons:self->window styleButton:NSWindowZoomButton];
+    [XEWindowManager hideWindowButtons:self->window styleButton:NSWindowMiniaturizeButton];
     
     [self createLeftView];
     [self createRightView];
@@ -33,7 +35,7 @@ static NSLayoutConstraint* fixLayoutConstraint(id view, NSLayoutAttribute attrib
 }
 
 - (void) createMainStack {
-    self->mainStack = [NSStackView stackViewWithViews: @[self->leftStack, self->rightStack]];
+    self->mainStack = [NSStackView stackViewWithViews: @[self->leftStack, self->effect]];
     self->mainStack.orientation = NSUserInterfaceLayoutOrientationHorizontal;
     self->mainStack.alignment = NSLayoutAttributeCenterY;
     self->mainStack.distribution = NSStackViewDistributionFillEqually;
@@ -58,11 +60,6 @@ static NSLayoutConstraint* fixLayoutConstraint(id view, NSLayoutAttribute attrib
     //[plusIcon setSize:NSMakeSize(30, 30)];
     
     NSView* createButton = createSplashButton(@"Create a new project", NSBezelStyleRounded, NO);
-//    [createButton setContentTintColor:[NSColor systemBlueColor]];
-//    [createButton setImage:plusIcon];
-//    [createButton setImagePosition:NSImageLeft];
-//    [createButton setImageScaling:NSImageScaleProportionallyUpOrDown];
-    
     NSView* openButton = createSplashButton(@"Open a file or folder", NSBezelStyleRounded, YES);
     NSView* cloneButton = createSplashButton(@"Clone a git project", NSBezelStyleRounded, YES);
     
@@ -73,18 +70,23 @@ static NSLayoutConstraint* fixLayoutConstraint(id view, NSLayoutAttribute attrib
 }
 
 - (void) createRightView {
-    NSBox* box = [[NSBox alloc] init];
-    box.boxType = NSBoxCustom;
-    box.fillColor = [NSColor clearColor];
-    box.borderWidth = 0;
-    box.translatesAutoresizingMaskIntoConstraints = NO;
-     
-    self->rightStack = [NSStackView stackViewWithViews: @[box]];
-    self->mainStack.alignment = NSLayoutAttributeTop; // Set to Top to align at the top
-    self->mainStack.distribution = NSStackViewDistributionFill; // Set to Fill to fill the available height
+//    NSBox* box = [[NSBox alloc] init];
+//    box.boxType = NSBoxCustom;
+//    box.fillColor = [NSColor clearColor];
+//    box.borderWidth = 0;
+//    box.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    effect = [[NSVisualEffectView alloc] initWithFrame:self->window.contentView.bounds];
+    effect.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
+    effect.material = NSVisualEffectMaterialFullScreenUI;
+    effect.state = NSVisualEffectStateActive;
+
+    self->rightStack = [NSStackView stackViewWithViews: @[]];
     self->rightStack.wantsLayer = YES;
     self->rightStack.layer.backgroundColor = [NSColor controlAccentColor].CGColor;
     self->rightStack.layer.opacity = 0.05f;
+    
+    [effect addSubview:self->rightStack];
 }
 
 - (void) createRecentStack {

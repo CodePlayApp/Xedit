@@ -28,4 +28,8 @@
     [window close];
 }
 
++ (void) hideWindowButtons:(NSWindow *)currentWindow styleButton:(NSUInteger)windowButton {
+    [[currentWindow standardWindowButton:windowButton] setHidden:YES];
+}
+
 @end
